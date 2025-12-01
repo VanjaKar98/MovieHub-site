@@ -14,6 +14,8 @@ body {
 }
 main {
   flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .overlay {
@@ -30,7 +32,7 @@ main {
 }
 
 .overlay > span {
-  font-size: 40px;
+  font-size: 2rem;
   color: #fff;
   background-color: #2fa352;
   padding: 40px;
@@ -95,6 +97,11 @@ main {
   box-shadow: 0 0 4px #2fa35266;
 }
 
+/* .filter {
+  display: flex;
+  row-gap: 5px;
+} */
+
 .filter button {
   padding: 0.4rem 1rem;
   cursor: pointer;
@@ -102,6 +109,7 @@ main {
   border: 1px solid #ccc;
   background-color: #fff;
   transition: 0.2s;
+  font-size: 0.8rem;
 }
 
 .filter button:hover {
@@ -253,4 +261,64 @@ td:last-child {
   text-align: center;
   background: #e8e8e8;
   color: #555;
+}
+
+@media (max-width: 1000px) {
+  .controls {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    width: 100%;
+  }
+  .search-input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+
+  tr button {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 12px;
+  }
+  .content {
+    padding: 1rem 0.5rem;
+  }
+  #sortBy {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .overlay > span {
+    font-size: 1.2rem;
+  }
+  th {
+    display: none;
+  }
+  td#title,
+  td#desc,
+  td#genre,
+  td#date,
+  td#rating,
+  td#actions {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  td:not(td#actions)::before {
+    content: attr(id) ": ";
+    text-transform: capitalize;
+    font-weight: 700;
+  }
 }
