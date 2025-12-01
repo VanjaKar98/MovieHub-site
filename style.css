@@ -297,8 +297,7 @@ td:last-child {
     font-size: 1rem;
   }
 }
-/* //+FIXING TABLE WIDTH ON MOBILE */
-/* //+ATTR() CSS PROPERTY */
+
 @media (max-width: 600px) {
   .overlay > span {
     font-size: 1.2rem;
