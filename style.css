@@ -297,7 +297,8 @@ td:last-child {
     font-size: 1rem;
   }
 }
-
+/* //+FIXING TABLE WIDTH ON MOBILE */
+/* //+ATTR() CSS PROPERTY */
 @media (max-width: 600px) {
   .overlay > span {
     font-size: 1.2rem;
@@ -314,6 +315,15 @@ td:last-child {
     display: block;
     width: 100%;
     text-align: left;
+  }
+
+  td#actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  td#actions > button {
+    margin: 0 10px;
   }
 
   td:not(td#actions)::before {
