@@ -303,7 +303,7 @@ function debounce(func, timeout = 300) {
 
 const debounceSearchHandler = debounce(() => handleSearch());
 
-SEARCH_INPUT.addEventListener("change", debounceSearchHandler);
+SEARCH_INPUT.addEventListener("input", debounceSearchHandler);
 
 function handleFilterParams(event) {
   let genre = event.target.dataset.genre;
