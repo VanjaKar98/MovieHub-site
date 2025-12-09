@@ -97,11 +97,6 @@ main {
   box-shadow: 0 0 4px #2fa35266;
 }
 
-/* .filter {
-  display: flex;
-  row-gap: 5px;
-} */
-
 .filter button {
   padding: 0.4rem 1rem;
   cursor: pointer;
@@ -329,5 +324,11 @@ td:last-child {
     content: attr(id) ": ";
     text-transform: capitalize;
     font-weight: 700;
+  }
+
+  .filter .active:hover {
+    background-color: #2fa352;
+    color: #fff;
+    border-color: #2fa352;
   }
 }
