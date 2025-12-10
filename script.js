@@ -197,7 +197,7 @@ function handleMovieEdit(event) {
   handlePageScroll();
   let movie = event.target.closest("#movie-row");
   let movieId = movie.dataset.id;
-  let movieData = moviesList.find((movie) => movie.id == movieId);
+  let movieData = moviesList.find((movie) => movie.id === movieId);
   putId = movieId;
   FORM[1].value = movieData.title;
   FORM[2].value = movieData.description;
