@@ -127,7 +127,7 @@ async function handleDelete(id) {
     let response = await fetch(apiUrl + "/" + id, {
       method: "DELETE",
     });
-    if (!response) throw new Error("Failed to DELETE");
+    if (!response.ok) throw new Error("Failed to DELETE");
   } catch (error) {
     console.log(error + "occured");
   }
@@ -286,7 +286,7 @@ const SEARCH_INPUT = document.querySelector(".search-input");
 function handleSearch() {
   let input = SEARCH_INPUT.value.toLowerCase();
   renderedMovies = moviesList.filter((movie) =>
-    movie.title.toLowerCase().includes(input)
+    movie.title.toLowerCase().includes(input),
   );
   renderMovies();
 }
